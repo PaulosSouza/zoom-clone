@@ -70,4 +70,29 @@ class Recorder {
     this.completeRecordings.push([...this.recordedBlobs]);
     this.recordedBlobs = [];
   }
+
+  getAllVideoURLs() {
+    return this.completeRecordings.map(recording => {
+      const superBuffer = new Blob(recording, { type: this.videoType });
+
+      return window.URL.createObjectURL(superBuffer);
+    });
+  }
+
+  download() {
+    if (!this.completeRecordings.length) return;
+
+    for (const recording of this.completeRecordings ) {
+      const blob = new Blob(recording, { type: this.videoType });
+      const url = window.URL.createObjectURL(blob);
+
+      const linkTag = document.createElement("a");
+      linkTag.style.display = "none";
+      linkTag.href = url;
+      linkTag.download = `${this.filename}.webm`;
+      
+      document.body.appendChild(linkTag);
+      linkTag.click();
+    }
+  }
 }
