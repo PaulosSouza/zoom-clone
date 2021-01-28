@@ -1,0 +1,4 @@
+gobarber run on 3333
+zoom-web run on 8080
+zoom-socket on 3000:3000
+zoom-peer on 3001:3001
