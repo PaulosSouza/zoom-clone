@@ -4,7 +4,7 @@ const onload = () => {
   console.log('this is the room', room)
 
     // const socketUrl = 'http://localhost:3000'
-    const socketUrl = 'https://zoom-clone.phsouza.tech/'
+    const socketUrl = 'https://secure-river-25237.herokuapp.com/'
     const socketBuilder = new SocketBuilder({ socketUrl })
 
     const peerConfig = Object.values({
