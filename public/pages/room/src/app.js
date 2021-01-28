@@ -10,7 +10,7 @@ const onload = () => {
     const peerConfig = Object.values({
       id: undefined,
       config: {
-        host: '134.122.116.46:3000',
+        host: '134.122.116.46',
         port: 3001,
         secure: true
         // port: 9000,
