@@ -4,15 +4,15 @@ const onload = () => {
   console.log('this is the room', room)
 
     // const socketUrl = 'http://localhost:3000'
-    const socketUrl = 'https://134.122.116.46:3000'
+    const socketUrl = 'https://134.122.116.46:8081'
     const socketBuilder = new SocketBuilder({ socketUrl })
 
     const peerConfig = Object.values({
       id: undefined,
       config: {
         host: '134.122.116.46',
-        port: 3001,
-        secure: true
+        port: 8082,
+        secure: false
         // port: 9000,
         // host: 'localhost',
         // path: '/'
