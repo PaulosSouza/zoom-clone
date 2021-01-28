@@ -4,13 +4,14 @@ const onload = () => {
   console.log('this is the room', room)
 
     // const socketUrl = 'http://localhost:3000'
-    const socketUrl = 'https://pacific-oasis-68731.herokuapp.com/'
+    const socketUrl = 'https://134.122.116.46:3000'
     const socketBuilder = new SocketBuilder({ socketUrl })
 
     const peerConfig = Object.values({
       id: undefined,
       config: {
-        host: 'enigmatic-sierra-69580.herokuapp.com',
+        host: '134.122.116.46:3000',
+        port: 3001,
         secure: true
         // port: 9000,
         // host: 'localhost',
